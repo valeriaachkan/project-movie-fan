@@ -1,0 +1,127 @@
+@mixin h1() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+
+    // @media screen and (min-width:$tablet) () {
+       
+    // }
+}
+@mixin h2() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+}
+
+@mixin h3() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+}
+
+@mixin h4() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.015em;
+}
+
+@mixin h5() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+}
+
+@mixin h6() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+}
+
+@mixin body-l() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+@mixin body-r() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin body-s() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@mixin body-xs() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+@mixin caption() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@mixin overline-r() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+@mixin overline-s() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+@mixin link-r() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+@mixin link-s() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+@mixin link-xs() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+}

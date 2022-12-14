@@ -1,0 +1,39 @@
+@import './variables';
+
+%list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+%image {
+    display: block;
+}
+
+%button {
+    padding: 16px 32px;
+    border-radius: 12px;
+    background-color: $primary-color-400;
+    border: 1px solid $primary-color-400;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    @include body-r;
+    color: $white-color;
+
+    cursor: pointer;
+}
+
+%button-hover {
+    @extend %button;
+    border: 1px solid $primary-color-500;
+
+    background-color: $primary-color-500;
+}
+
+%input {
+    padding: 20px 16px 20px 56px;
+
+    background: $black-10;
+    border: 1px solid $grey-700;
+    border-radius: 12px;
+}
