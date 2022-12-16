@@ -2,14 +2,14 @@
 
 .hero__container {
     padding-top: 160px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 
 .hero__heading {
     @include h1();
     margin-bottom: 16px;
     color: $grey-50;
-    
+
 
 }
 
@@ -26,11 +26,18 @@
 
     &__input {
         @extend %input;
+        @include body-r();
         width: 340px;
+        color: $grey-200;
 
         &::placeholder {
             @include body-r();
             color: $grey-600;
+        }
+
+        &:focus {
+            border-color: $primary-color-500;
+            outline: 0;
         }
     }
 

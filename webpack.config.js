@@ -24,7 +24,9 @@ module.exports = {
 				exclude: /node_modules/,
 				use: ['babel-loader'],
 			},
-			{ test: /\.hbs$/, loader: 'handlebars-loader' },
+			{	test: /\.hbs$/,
+				loader: "handlebars-loader" ,
+			},
 			{
                 test: /\.svg$/,
                 use: ['file-loader',
