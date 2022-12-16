@@ -9,11 +9,6 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			// {
-			// 	test: /\.s[ac]ss$/i,
-			// 	include: [__dirname + '/src'],
-			// 	use: ['style-loader', 'css-loader', "sass-loader",],
-			// },
 			{
 				test: /\.(scss|css)$/,
 				include: [__dirname + '/src'],
@@ -42,24 +37,6 @@ module.exports = {
 				test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
 				type: 'asset/inline',
 			  },
-			// {
-			// 	test: /\.(gif|png|jpe?g|svg)$/i,
-			// 	use: [
-			// 		{
-			// 			loader: 'url-loader',
-			// 			options: {
-			// 				name: '[path][name].[ext]',
-			// 				limit: 8192,
-			// 				esModule: false,
-			// 			},
-			// 		},
-			// 		'img-loader',
-			// 	],
-			// },
-			// {
-			// 	test: /\.png$/,
-			// 	use: ['file-loader'],
-			// },
 		],
 	},
 	plugins: [

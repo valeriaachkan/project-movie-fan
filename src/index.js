@@ -1,31 +1,23 @@
 import './sass/main.scss';
 import getRefs from './js/get-refs';
 import MoviesApiService from './js/api-service';
-import searchCardsTpl from './templates/movie-cards-on-search.hbs';
-import cardsTpl from './templates/movie-cards.hbs';
+import { fetchAllMov, fetchUpcomingMov, fetchSearchMovies } from './js/fetch';
+import { bodyClassAdd, bodyClassRemove, lightboxClassAdd, lightboxClassRemove } from './js/lightbox';
 
 const refs = getRefs();
 const moviesApiService = new MoviesApiService();
 
 refs.searchForm.addEventListener('submit', onSearch);
+refs.gallery.addEventListener('click', onMovieClick);
+refs.closeBtn.addEventListener('click', onBtnCloseModalClick);
+refs.lightbox.addEventListener('click', onLightboxClickCloseModal);
+document.addEventListener('keydown', onEscapeKeydown);
 
 onPageLoading();
 
 function onPageLoading() {
     fetchUpcomingMov();
-}
-
-async function fetchUpcomingMov() {
-    try {
-        const res = await moviesApiService.fetchUpcomingMovies();
-        const data = res.results;
-        const movies = data.filter(movie => { return movie.popularity >= 20 && movie.vote_average >= 7.5});
-        console.log(movies);
-
-        appendCardsMarkupOnPageLoading(movies);
-    } catch (error) {
-        console.log(error.message);
-    }
+    fetchAllMov();
 }
 
 function onSearch(e) {
@@ -34,28 +26,8 @@ function onSearch(e) {
     console.log(searchQuery);
 
     moviesApiService.query = searchQuery;
-    fetchMovies();
+    fetchSearchMovies();
 
-}
-function appendCardsMarkupOnPageLoading(movies) {
-    refs.upcomingMovieList.innerHTML = cardsTpl(movies);
-}
-
-async function fetchMovies() {
-    try {
-        const res = await moviesApiService.fetchMovie();
-        const data = res.results;
-        const movies = data.filter(movie => { return movie.popularity >= 10});
-        console.log(movies);
-
-        appendCardsMarkupOnSearch(movies);
-    } catch (error) {
-        console.log(error.message);
-    }
-}
-
-function appendCardsMarkupOnSearch(movies) {
-    refs.gallery.innerHTML = searchCardsTpl(movies);
 }
 
 function queryTrasform (query) {
@@ -65,4 +37,56 @@ function queryTrasform (query) {
 
     const trasformedQuery = query.trim().toLowerCase().split(' ').join('+');
     return trasformedQuery;
+}
+
+const options = {
+	rootMargin: '400px',
+};
+const callback = (entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			fetchAllMov();
+		}
+	});
+};
+const observer = new IntersectionObserver(callback, options);
+
+observer.observe(refs.sentinel);
+
+function onMovieClick(e) {
+    console.log(e);
+    if(!e.target.classList.contains('movie__card')) {
+        return;
+    }
+
+	const targetMovie = e.target;
+    console.log(targetMovie);
+
+    bodyClassAdd();
+    lightboxClassAdd();
+}
+
+function onBtnCloseModalClick() {
+	lightboxClassRemove();
+    bodyClassRemove();
+}
+
+function onLightboxClickCloseModal(e) {
+	const targetEl = e.target;
+
+	if (!targetEl.classList.contains('lightbox__overlay')) {
+		return;
+	}
+
+	lightboxClassRemove();
+    bodyClassRemove();
+}
+
+function onEscapeKeydown(e) {
+	if (e.code !== 'Escape') {
+		return;
+	}
+
+	lightboxClassRemove();
+    bodyClassRemove();
 }

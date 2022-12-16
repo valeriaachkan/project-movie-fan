@@ -28,6 +28,10 @@ body {
     background-size: 100%;
     background-position: 50% -160px;
     background-repeat: repeat-y;
+
+    &.modal-open {
+        overflow: hidden;
+    }
 }
 
 .container {

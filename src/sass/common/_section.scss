@@ -30,12 +30,15 @@
     align-items: start;
 }
 .movie__card {
-    padding: 8px 8px 20px;
+    padding: 8px 8px;
     width: 282px;
+    // height: 515px;
 
     background: rgba(32, 40, 62, 0.8);
     backdrop-filter: blur(40px);
     border-radius: 12px;
+
+    cursor: pointer;
 }
 .thumb {
     width: 266px;
@@ -44,6 +47,7 @@
     background-color: $grey-400;
 
     position: relative;
+    pointer-events: none;
 }
 
 .movie__image {
@@ -52,6 +56,8 @@
     height: 100%;
     border-radius: 8px;
     object-fit: cover;
+
+    pointer-events: none;
 }
 
 .movie__rating {
@@ -71,25 +77,39 @@
     backdrop-filter: blur(4px);
     border-radius: 8px;
 
+    pointer-events: none;
+
     &-value {
         @include body-r();
         font-weight: 200;
         color: $warning-500;
+
+        pointer-events: none;
     }
 }
 
 .movie__caption {
-    padding: 16px 10px 0;
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px 10px 0;
+
+    pointer-events: none;
 }
 
 .movie__heading {
     @include h6();
     letter-spacing: 0.02em;
     color: $grey-50;
+
+    pointer-events: none;
 }
 
 .movie__info {
     @include body-r;
-    margin-top: 3px;
+    // margin-top: 3px;
     color: $grey-400;
+
+    pointer-events: none;
 }

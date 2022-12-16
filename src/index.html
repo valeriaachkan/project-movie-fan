@@ -49,10 +49,16 @@
     </section>
     <div class="gallery">
         <section class="section section__container container upcoming-movies">
-            <h3 class="section__heading">Upcoming movies</h3>
+            <h3 class="section__heading">Upcoming</h3>
             <ul class="movie__list movie__list--upcoming">
             </ul>
         </section>
+        <section class="section section__container container">
+            <h3 class="section__heading">Movies</h3>
+            <ul class="movie__list movie__list--all">
+            </ul>
+        </section>
+        <div id="sentinel"></div>
     </div>
     <footer class="page-footer">
         <div class="container page-footer__container">
@@ -70,7 +76,23 @@
         </div>
     </footer>
 
+    <div class="lightbox">
+        <div class="lightbox__overlay"></div>
 
+        <div class="lightbox__content">
+        
+        </div>
+
+        <button type="button" class="lightbox__button" data-action="close-lightbox">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    fill="#fff" />
+                <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+        </button>
+    </div>
+    </div>
 </body>
 
 </html>
