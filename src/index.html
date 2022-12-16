@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFan</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="container page-header__container">
+            <a href="./index.html" class="logo logo--header">
+                <svg width="40px" height="40px" viewBox="0 0 1000 1000">
+                    <path fill="#1EA5FC" d="M231.4,394.07L669.5,119.2C752.42,67.18,860,126.99,860,225.13v549.74c0,98.13-107.58,157.95-190.5,105.93
+    L231.4,605.93C153.41,556.99,153.41,443.01,231.4,394.07z" class="color-secondary"></path>
+                    <path fill="#5A4AF4" d="M768.6,394.07L330.5,119.2C247.58,67.18,140,126.99,140,225.13v549.74c0,98.13,107.58,157.95,190.5,105.93
+    l438.1-274.87C846.59,556.99,846.59,443.01,768.6,394.07z" class="color-primary"></path>
+                </svg>
+            </a>
+            <nav class="site-nav">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="">Home</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="">My List</a></li>
+                    <!-- <li class="site-nav__item">Sign in</li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container hero__container">
+            <h1 class="hero__heading">Welcome to MovieFan</h1>
+            <h2 class="hero__subheading">Millions of movies to discover. Explore now.</h2>
+            <form class="search-form" id="search-form">
+                <input class="search-form__input" type="text" name="searchQuery" autocomplete="off"
+                    placeholder="Search Movies or TV Shows" />
+                <svg class="search-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                        stroke="#323B54" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M22 22L20 20" stroke="#323B54" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <button class="search-form__button" type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+    <div class="gallery">
+        <section class="section section__container container upcoming-movies">
+            <h3 class="section__heading">Upcoming movies</h3>
+            <ul class="movie__list movie__list--upcoming">
+            </ul>
+        </section>
+    </div>
+    <footer class="page-footer">
+        <div class="container page-footer__container">
+            <a href="./index.html" class="logo">
+                <svg width="40px" height="40px" viewBox="0 0 1000 1000">
+                    <path fill="#1EA5FC" d="M231.4,394.07L669.5,119.2C752.42,67.18,860,126.99,860,225.13v549.74c0,98.13-107.58,157.95-190.5,105.93
+    L231.4,605.93C153.41,556.99,153.41,443.01,231.4,394.07z" class="color-secondary"></path>
+                    <path fill="#5A4AF4" d="M768.6,394.07L330.5,119.2C247.58,67.18,140,126.99,140,225.13v549.74c0,98.13,107.58,157.95,190.5,105.93
+    l438.1-274.87C846.59,556.99,846.59,443.01,768.6,394.07z" class="color-primary"></path>
+                </svg>
+            </a>
+            <p class="page-footer__text">A fun and personal project created by <a class="page-footer__link"
+                    href="">Valeria Achkan</a>. Source code available on <a class="page-footer__link"
+                    href="">Github</a>.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

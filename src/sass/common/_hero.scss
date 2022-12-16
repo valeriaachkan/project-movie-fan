@@ -1,0 +1,59 @@
+@import '/src/sass/base/variables';
+
+.hero__container {
+    padding-top: 160px;
+    padding-bottom: 60px;
+}
+
+.hero__heading {
+    @include h1();
+    margin-bottom: 16px;
+    color: $grey-50;
+
+
+}
+
+.hero__subheading {
+    @include body-l();
+    margin-bottom: 24px;
+    color: $grey-300;
+}
+
+
+.search-form {
+    position: relative;
+    // outline: 1px solid white;
+
+    &__input {
+        @extend %input;
+        @include body-r();
+        width: 340px;
+        color: $grey-200;
+
+        &::placeholder {
+            @include body-r();
+            color: $grey-600;
+        }
+
+        &:focus {
+            border-color: $primary-color-500;
+            outline: 0;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 29%;
+        left: 16px;
+    }
+
+    &__button {
+        @extend %button;
+        margin-left: 5px;
+
+        &:hover,
+        &:focus {
+            @extend %button-hover;
+        }
+    }
+}
