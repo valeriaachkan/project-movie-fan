@@ -1,5 +1,6 @@
 import MoviesApiService from './api-service';
-import { appendAllMoviesCardsMarkup, appendUpcomingMoviesCardsMarkup, appendCardsMarkupOnSearch } from './render-markup.js';
+import { smoothScroll } from './load-more-btn';
+import { appendAllMoviesCardsMarkup, appendUpcomingMoviesCardsMarkup, appendCardsMarkupOnSearch, renderMovieDetails } from './render-markup.js';
 
 const moviesApiService = new MoviesApiService();
 
@@ -23,17 +24,22 @@ async function fetchAllMov() {
         // console.log(data);
 
         appendAllMoviesCardsMarkup(data);
+
+        if(moviesApiService.page > 2) {
+            smoothScroll();
+        }
     } catch (error) {
         console.log(error.message);
     }
 }
 
-async function fetchSearchMovies() {
+async function fetchSearchMovies(query) {
+    moviesApiService.query = query;
     try {
         const res = await moviesApiService.fetchMovie();
         const data = res.results;
         const movies = data.filter(movie => { return movie.popularity >= 10});
-        // console.log(movies);
+        console.log(movies);
 
         appendCardsMarkupOnSearch(movies);
     } catch (error) {
@@ -41,4 +47,17 @@ async function fetchSearchMovies() {
     }
 }
 
-export { fetchAllMov, fetchUpcomingMov, fetchSearchMovies }
+async function fetchMovieDetails(movieId) {
+    moviesApiService.id = movieId;
+    try {
+        const res = await moviesApiService.fetchMovieDetails();
+        console.log(res);
+
+        renderMovieDetails(res);
+
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+export { fetchAllMov, fetchUpcomingMov, fetchSearchMovies, fetchMovieDetails }

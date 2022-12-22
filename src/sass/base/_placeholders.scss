@@ -11,7 +11,7 @@
 }
 
 %button {
-    padding: 16px 32px;
+    padding: 10px 10px;
     border-radius: 12px;
     background-color: $primary-color-400;
     border: 1px solid $primary-color-400;
@@ -21,6 +21,10 @@
     color: $white-color;
 
     cursor: pointer;
+
+      @media screen and (min-width: $tablet) {
+        padding: 16px 32px;
+    }
 }
 
 %button-hover {
@@ -31,9 +35,16 @@
 }
 
 %input {
-    padding: 16px 16px 16px 56px;
+    padding: 12px 12px 12px 56px;
 
     background: $black-10;
     border: 1px solid $grey-700;
     border-radius: 12px;
+
+    @media screen and (min-width: $tablet) {
+        padding: 16px 16px 16px 56px;
+    }
+    // @media screen and (max-width: 767px) {
+        
+    // }
 }

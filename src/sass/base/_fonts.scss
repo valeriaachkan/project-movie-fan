@@ -2,7 +2,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 60px;
-    line-height: 80px;
+    line-height: 1.3;
     letter-spacing: -0.02em;
 
     // @media screen and (min-width:$tablet) () {
@@ -13,7 +13,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 48px;
-    line-height: 56px;
+    line-height: 1.16;
     letter-spacing: -0.02em;
 }
 
@@ -21,7 +21,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 32px;
-    line-height: 40px;
+    line-height: 1.25;
     letter-spacing: -0.02em;
 }
 
@@ -29,7 +29,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 1.3;
     letter-spacing: -0.015em;
 }
 
@@ -37,7 +37,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
     letter-spacing: -0.015em;
 }
 
@@ -45,7 +45,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: -0.015em;
 }
 
@@ -60,35 +60,35 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
 }
 
 @mixin body-s() {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.7;
 }
 
 @mixin body-xs() {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 12px;
-    line-height: 24px;
+    line-height: 2;
 }
 
 @mixin caption() {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
 }
 
 @mixin overline-r() {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.7;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
@@ -97,7 +97,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 1.3;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
@@ -106,7 +106,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
@@ -114,7 +114,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
@@ -122,6 +122,6 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 1.3;
     letter-spacing: 0.02em;
 }

@@ -10,6 +10,7 @@ export default class MoviesApiService {
 		this.#key = 'd7b55c78972af1312b499784f8cdaa54';
 		this.#baseUrl = 'https://api.themoviedb.org/3/';
 		this.page = 1;
+		this.movieId = 0;
 	}
 
 	async fetchMovie() {
@@ -38,7 +39,6 @@ export default class MoviesApiService {
 	}
 
 	async fetchAllMovies() {
-
 		// https://api.themoviedb.org/3/movie/top_rated?api_key=d7b55c78972af1312b499784f8cdaa54&language=en-US&page=1
 		const searchParams = new URLSearchParams({
 			api_key: this.#key,
@@ -49,6 +49,20 @@ export default class MoviesApiService {
 		const response = await axios.get(url);
 		const data = response.data;
 		this.incrementPage();
+
+        return data;
+	}
+
+	async fetchMovieDetails() {
+		// https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+		const searchParams = new URLSearchParams({
+			api_key: this.#key,
+			language: 'en-US',
+		});
+
+		const url = `${this.#baseUrl}movie/${this.movieId}?${searchParams}`;
+		const response = await axios.get(url);
+		const data = response.data;
 
         return data;
 	}
@@ -66,6 +80,13 @@ export default class MoviesApiService {
 	}
 	set query(newQuery) {
 		return (this.searchQuery = newQuery);
+	}
+
+	get id() {
+		return this.movieId;
+	}
+	set id(movId) {
+		return (this.movieId = movId);
 	}
 }
 

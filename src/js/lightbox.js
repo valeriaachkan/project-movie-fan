@@ -4,10 +4,12 @@ const refs = getRefs();
 
 function lightboxClassAdd() {
     refs.lightbox.classList.add('is-open');
+	refs.lightbox.classList.remove('lightbox--hidden');
 }
 
 function lightboxClassRemove() {
 	refs.lightbox.classList.remove('is-open');
+	refs.lightbox.classList.add('lightbox--hidden');
 }
 
 function bodyClassAdd() {
@@ -18,4 +20,8 @@ function bodyClassRemove() {
 	refs.body.classList.remove('modal-open');
 }
 
-export { bodyClassAdd, bodyClassRemove, lightboxClassAdd, lightboxClassRemove };
+function resetMovieContainer() {
+	refs.movieContainer.innerHTML = '';
+} 
+
+export { bodyClassAdd, bodyClassRemove, lightboxClassAdd, lightboxClassRemove, resetMovieContainer };
