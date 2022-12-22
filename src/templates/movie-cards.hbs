@@ -1,9 +1,9 @@
 {{#each this}}
-<li class="movie__card">
+<li class="movie__card" data-id="{{id}}">
     <div class="thumb">
-        <img class="movie__image" src="http://image.tmdb.org/t/p/w342/{{poster_path}}" alt="{{title}}" />
+        <img class="movie__image" src="http://image.tmdb.org/t/p/w342/{{poster_path}}" alt="{{title}}" loading="lazy"/>
     </div>
-    <div class="movie__rating">
+    <div class="movie__rating movie__rating--positioned">
         <svg class="movie__rating-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
