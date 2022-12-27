@@ -26,6 +26,7 @@
     flex-direction: row;
     align-items: center;
     margin: 0;
+    
 }
 
 .site-nav__item {
@@ -33,6 +34,10 @@
 
     @media screen and (min-width: $tablet) {
         margin-right: 40px;
+    }
+
+    &:last-child {
+        margin-right: 0;
     }
 }
 

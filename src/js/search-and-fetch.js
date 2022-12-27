@@ -1,8 +1,56 @@
+import getRefs from './get-refs';
 import MoviesApiService from './api-service';
 import { smoothScroll } from './load-more-btn';
+import { showLoadBtn } from './load-more-btn';
+import { bodyClassAdd, lightboxClassAdd } from './lightbox';
 import { appendAllMoviesCardsMarkup, appendUpcomingMoviesCardsMarkup, appendCardsMarkupOnSearch, renderMovieDetails } from './render-markup.js';
 
+const refs = getRefs();
 const moviesApiService = new MoviesApiService();
+
+refs.searchForm.addEventListener('submit', onSearch);
+refs.gallery.addEventListener('click', onMovieClick);
+
+function onPageLoading() {
+    fetchUpcomingMov();
+    fetchAllMov();
+    showLoadBtn();
+}
+
+function onSearch(e) {
+    e.preventDefault();
+	const searchQuery = queryTrasform(e.currentTarget.elements.searchQuery.value);
+    console.log(searchQuery);
+
+    // moviesApiService.query = searchQuery;
+    fetchSearchMovies(searchQuery);
+
+}
+
+function onMovieClick(e) {
+    console.log(e);
+    if(!e.target.classList.contains('movie__card')) {
+        return;
+    }
+
+	const targetMovie = e.target;
+    const movieId = targetMovie.getAttribute('data-id');
+    console.log(targetMovie);
+    console.log(movieId);
+
+    fetchMovieDetails(movieId);
+    bodyClassAdd();
+    lightboxClassAdd();
+}
+
+function queryTrasform (query) {
+    if (query === '') {
+        return;
+    }
+
+    const trasformedQuery = query.trim().toLowerCase().split(' ').join('+');
+    return trasformedQuery;
+}
 
 async function fetchUpcomingMov() {
     try {
@@ -60,4 +108,4 @@ async function fetchMovieDetails(movieId) {
     }
 }
 
-export { fetchAllMov, fetchUpcomingMov, fetchSearchMovies, fetchMovieDetails }
+export { fetchAllMov, fetchUpcomingMov, fetchSearchMovies, fetchMovieDetails, onPageLoading }

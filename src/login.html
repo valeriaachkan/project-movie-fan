@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFan</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="container page-header__container">
+            <a href="./index.html" class="logo logo--header">
+                <svg width="40px" height="40px" viewBox="0 0 1000 1000">
+                    <path fill="#1EA5FC" d="M231.4,394.07L669.5,119.2C752.42,67.18,860,126.99,860,225.13v549.74c0,98.13-107.58,157.95-190.5,105.93
+    L231.4,605.93C153.41,556.99,153.41,443.01,231.4,394.07z" class="color-secondary"></path>
+                    <path fill="#5A4AF4" d="M768.6,394.07L330.5,119.2C247.58,67.18,140,126.99,140,225.13v549.74c0,98.13,107.58,157.95,190.5,105.93
+    l438.1-274.87C846.59,556.99,846.59,443.01,768.6,394.07z" class="color-primary"></path>
+                </svg>
+            </a>
+            <nav class="site-nav">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Home</a></li>
+                    <!-- <li class="site-nav__item"><a class="site-nav__link" href="">My List</a></li> -->
+                    <li class="site-nav__item"><a class="site-nav__link" href="./login.html">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="login login__container container">
+            <div class="login-thumb login-thumb--saly">
+                <img class="login-thumb__img" src="./images/saly.svg" alt="">
+            </div>
+            <div class="login-thumb">
+                <h1 class="login__heading">Log in</h1>
+                <form class="login-form" id="login-form">
+                    <label class="login-form__field" for="txtEmail">
+                        <input class="login-form__input" id="txtEmail" name="email" type="email" placeholder="Email" autocomplete="off">
+                        <svg class="login-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                                stroke="#475069" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#475069"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </label>
+                    <label class="login-form__field" for="txtPassword">
+                        <input class="login-form__input" id="txtPassword" name="password" type="password" placeholder="Password" autocomplete="off">
+                        <svg class="login-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                                stroke="#475069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M16.2802 13.61C15.1502 14.74 13.5302 15.09 12.1002 14.64L9.5102 17.22C9.3302 17.41 8.9602 17.53 8.6902 17.49L7.4902 17.33C7.0902 17.28 6.7302 16.9 6.6702 16.51L6.5102 15.31C6.4702 15.05 6.6002 14.68 6.7802 14.49L9.3602 11.91C8.9202 10.48 9.2602 8.86001 10.3902 7.73001C12.0102 6.11001 14.6502 6.11001 16.2802 7.73001C17.9002 9.34001 17.9002 11.98 16.2802 13.61Z"
+                                stroke="#475069" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M10.4496 16.28L9.59961 15.42" stroke="#475069" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.3949 10.7H13.4039" stroke="#475069" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </label>
+                    <button class="login-form__button" id="btnLogin" type="submit">Log in</button>
+                </form>
+                <button class="login-form__button" id="btnSignup" type="submit">Sign up</button>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container page-footer__container">
+            <a href="./index.html" class="logo">
+                <svg width="40px" height="40px" viewBox="0 0 1000 1000">
+                    <path fill="#1EA5FC" d="M231.4,394.07L669.5,119.2C752.42,67.18,860,126.99,860,225.13v549.74c0,98.13-107.58,157.95-190.5,105.93
+    L231.4,605.93C153.41,556.99,153.41,443.01,231.4,394.07z" class="color-secondary"></path>
+                    <path fill="#5A4AF4" d="M768.6,394.07L330.5,119.2C247.58,67.18,140,126.99,140,225.13v549.74c0,98.13,107.58,157.95,190.5,105.93
+    l438.1-274.87C846.59,556.99,846.59,443.01,768.6,394.07z" class="color-primary"></path>
+                </svg>
+            </a>
+            <p class="page-footer__text">A fun and personal project created by <a class="page-footer__link"
+                    href="">Valeria Achkan</a>. Source code available on <a class="page-footer__link"
+                    href="">Github</a>.</p>
+        </div>
+    </footer>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
