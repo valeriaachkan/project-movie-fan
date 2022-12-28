@@ -1,0 +1,225 @@
+@import '/src/sass/base/variables';
+
+.signin {
+    padding-top: 120px;
+    padding-bottom: 80px;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-top: 100px;
+    }
+    @media screen and (min-width: $desktop) {
+        justify-content: space-around;
+
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    &__container {
+
+        @media screen and (min-width: $desktop) {
+        }
+    }
+}
+
+.signin__heading {
+    @include h3();
+    font-size: 38px;
+    color: $grey-100;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+        @include h2();
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include h1();
+    }
+}
+
+.signin-thumb {
+    flex-basis: calc((100% - 50px) / 2);
+    max-width: 500px;
+
+    &--saly {
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        } 
+
+
+    }
+
+    &__img {
+        @extend %image;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.join {
+    
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    } 
+
+
+    &__item {
+        position: relative;
+
+        margin-right: auto;
+        margin-left: auto;
+        width: max-content;
+        min-width: 220px;
+
+        @media screen and (min-width: $tablet) {
+            min-width: auto;
+            margin-left: 0;
+            margin-right: 0;
+        } 
+
+        &:first-child {
+            margin-bottom: 14px;
+
+            @media screen and (min-width: $tablet) {
+                margin-bottom: 20px;
+            } 
+        }
+    }
+
+    &__list {
+        @extend %list;
+    }
+
+    &__button {
+        @extend %input;
+        @include body-r;
+
+        border-color: $grey-100;
+        max-width: 220px;
+        color: $grey-100;
+        text-align: left;
+
+        cursor: pointer;
+
+        @media screen and (min-width: $tablet) {
+            @include body-l;
+            width: 255px;
+            max-width: 255px;
+        } 
+
+    }
+
+    &__icon {
+        position: absolute;
+        top: 27%;
+        left: 16px;
+
+        @media screen and (min-width: $tablet) {
+            top: 32%;
+        } 
+
+    }
+
+    &__text {
+        @include link-s();
+        text-align: center;
+        margin-top: 20px;
+        color: $grey-300;
+
+        @media screen and (min-width: $tablet) {
+            @include link-r();
+            text-align: left;
+        }
+
+        &--centered {
+            text-align: center;
+        }
+    }
+
+    &__link {
+        color: $primary-color-400;
+
+        cursor: pointer;
+    }
+}
+
+
+
+
+.login-form {
+
+    display: flex;
+    flex-direction: column;
+
+    &__field {
+        position: relative;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+
+            @media screen and (min-width: $tablet) {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__input {
+        @extend %input;
+        @include body-s();
+        width: 100%;
+        color: $grey-200;
+
+        @media screen and (min-width: $tablet) {
+            @include body-r();
+            // width: 340px;
+        }
+
+        &::placeholder {
+            @include body-s();
+            color: $grey-600;
+
+            // @media screen and (min-width: $tablet) {
+            //     @include body-r();
+            // }
+        }
+
+        &:focus {
+            border-color: $primary-color-500;
+            background-color: inherit;
+            outline: 0;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 29%;
+        left: 16px;
+
+        @media screen and (max-width: 767px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__button {
+        @extend %button;
+        margin-top: 14px;
+        // max-width: 340px;
+
+        @media screen and (min-width: $tablet) {
+            margin-top: 40px;
+        }
+
+        &:hover,
+        &:focus {
+            @extend %button-hover;
+        }
+    }
+}

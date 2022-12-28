@@ -2,6 +2,38 @@ import getRefs from './get-refs';
 
 const refs = getRefs();
 
+refs.closeBtn.addEventListener('click', onBtnCloseModalClick);
+refs.lightbox.addEventListener('click', onLightboxClickCloseModal);
+document.addEventListener('keydown', onEscapeKeydown);
+
+function onBtnCloseModalClick() {
+	lightboxClassRemove();
+    bodyClassRemove();
+    resetMovieContainer();
+}
+
+function onLightboxClickCloseModal(e) {
+	const targetEl = e.target;
+
+	if (!targetEl.classList.contains('lightbox')) {
+		return;
+	}
+
+	lightboxClassRemove();
+    bodyClassRemove();
+    resetMovieContainer();
+}
+
+function onEscapeKeydown(e) {
+	if (e.code !== 'Escape') {
+		return;
+	}
+
+	lightboxClassRemove();
+    bodyClassRemove();
+    resetMovieContainer();
+}
+
 function lightboxClassAdd() {
     refs.lightbox.classList.add('is-open');
 	refs.lightbox.classList.remove('lightbox--hidden');

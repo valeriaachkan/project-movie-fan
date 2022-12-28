@@ -2,9 +2,10 @@
 @import './base/placeholders';
 @import './base/variables';
 @import './base/visually-hidden';
-@import './common/common';
-@import './common/header';
-@import './common/hero';
-@import './common/section';
-@import './common/footer';
-@import './common/lightbox';
+@import './components/common';
+@import './components/header';
+@import './components/hero';
+@import './components/section';
+@import './components/footer';
+@import './components/lightbox';
+@import './components/login';

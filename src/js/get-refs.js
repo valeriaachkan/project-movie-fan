@@ -12,5 +12,29 @@ export default function getRefs() {
         closeBtn: document.querySelector('[data-action="close-lightbox"]'),
         movieFeature: document.querySelector('p.movie__feature-value--country'),
         loadBtn: document.querySelector('button.load-more'),
+        heroSection: document.querySelector('section.hero'),
+        signinLink: document.querySelector('button.site-nav__link--signin'),
+        // joinWithGoogle: document.querySelector('button#joinWithGoogle'),
+        // joinWithEmail: document.querySelector('button#joinWithEmail'),
+        // joinSection: document.querySelector('div.join'),
+        loginLink: document.querySelector('span.join__link'),
+        signupEmailSection: document.querySelector('div.signup-email'),
+        signinSection: document.querySelector('section.signin'),
+        loginSection: document.querySelector('div.login'),
+        inputEmail: document.querySelector('input#txtEmail'),
+        inputPassword: document.querySelector('input#txtPassword'),
+        loginEmail: document.querySelector('input#loginEmail'),
+        loginPassword: document.querySelector('input#loginPassword'),
+        btnLogin: document.querySelector('button#btnLogin'),
+        btnSignup: document.querySelector('button#btnSignup'),
+        navWatchlist: document.querySelector('li.site-nav__item--watchlist'),
+        navSignin: document.querySelector('li.site-nav__item--signin'),
+        navLogout: document.querySelector('li.site-nav__item--logout'),
+        navList: document.querySelector('ul.site-nav__list'),
+        linkWatchlist: document.querySelector('button.site-nav__link--watchlist'),
+        btnLogout: document.querySelector('button.site-nav__link--logout'),
+        
+
+
     }
 }
