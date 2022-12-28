@@ -28,7 +28,7 @@ function onSearch(e) {
 }
 
 function onMovieClick(e) {
-    console.log(e);
+    // console.log(e);
     if(!e.target.classList.contains('movie__card')) {
         return;
     }

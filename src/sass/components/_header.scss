@@ -30,14 +30,13 @@
 }
 
 .site-nav__item {
-    margin-right: 15px;
 
-    @media screen and (min-width: $tablet) {
-        margin-right: 40px;
-    }
+    &:not(:first-child) {
+        margin-left: 15px;
 
-    &:last-child {
-        margin-right: 0;
+        @media screen and (min-width: $tablet) {
+            margin-left: 40px;
+        }
     }
 }
 
@@ -52,4 +51,11 @@
     &:focus {
         color: $hover-color;
     }
+
+    &--btn {
+        background-color: transparent;
+        border: 0;
+    }
+
+    
 }

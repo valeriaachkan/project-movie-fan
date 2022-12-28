@@ -41,6 +41,7 @@
     "firebaseui": "^6.0.2",
     "handlebars-loader": "^1.7.2",
     "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.5",
     "sass-extras": "^1.0.0"
   }
 }

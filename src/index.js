@@ -5,9 +5,14 @@ import './js/search-and-fetch';
 import './js/render-markup';
 import './js/load-more-btn';
 import './js/lightbox';
-// import './js/auth';
+import './js/sign-in';
+import './js/fb';
+import './js/auth';
+import './js/my-watchlist';
 
 import { onPageLoading } from './js/search-and-fetch';
+import checkLoggedInState from './js/my-watchlist';
+import { loggedInState } from './js/auth';
 import { bodyClassAdd, bodyClassRemove, lightboxClassAdd, lightboxClassRemove, resetMovieContainer } from './js/lightbox';
 import { showLoadBtn, hideLoadBtn, smoothScroll } from './js/load-more-btn';
 import { appendAllMoviesCardsMarkup } from './js/render-markup';
@@ -22,8 +27,10 @@ import { appendAllMoviesCardsMarkup } from './js/render-markup';
 // refs.lightbox.addEventListener('click', onLightboxClickCloseModal);
 // document.addEventListener('keydown', onEscapeKeydown);
 // refs.loadBtn.addEventListener('click', onLoadMore);
+console.log(loggedInState);
 
 onPageLoading();
+// checkLoggedInState(loggedInState);
 
 // function onPageLoading() {
 //     fetchUpcomingMov();

@@ -1,6 +1,6 @@
 @import '/src/sass/base/variables';
 
-.login {
+.signin {
     padding-top: 120px;
     padding-bottom: 80px;
 
@@ -26,11 +26,11 @@
     }
 }
 
-.login__heading {
+.signin__heading {
     @include h3();
     font-size: 38px;
     color: $grey-100;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 
     @media screen and (min-width: $tablet) {
         @include h2();
@@ -42,7 +42,7 @@
     }
 }
 
-.login-thumb {
+.signin-thumb {
     flex-basis: calc((100% - 50px) / 2);
     max-width: 500px;
 
@@ -62,6 +62,96 @@
         object-fit: contain;
     }
 }
+
+.join {
+    
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    } 
+
+
+    &__item {
+        position: relative;
+
+        margin-right: auto;
+        margin-left: auto;
+        width: max-content;
+        min-width: 220px;
+
+        @media screen and (min-width: $tablet) {
+            min-width: auto;
+            margin-left: 0;
+            margin-right: 0;
+        } 
+
+        &:first-child {
+            margin-bottom: 14px;
+
+            @media screen and (min-width: $tablet) {
+                margin-bottom: 20px;
+            } 
+        }
+    }
+
+    &__list {
+        @extend %list;
+    }
+
+    &__button {
+        @extend %input;
+        @include body-r;
+
+        border-color: $grey-100;
+        max-width: 220px;
+        color: $grey-100;
+        text-align: left;
+
+        cursor: pointer;
+
+        @media screen and (min-width: $tablet) {
+            @include body-l;
+            width: 255px;
+            max-width: 255px;
+        } 
+
+    }
+
+    &__icon {
+        position: absolute;
+        top: 27%;
+        left: 16px;
+
+        @media screen and (min-width: $tablet) {
+            top: 32%;
+        } 
+
+    }
+
+    &__text {
+        @include link-s();
+        text-align: center;
+        margin-top: 20px;
+        color: $grey-300;
+
+        @media screen and (min-width: $tablet) {
+            @include link-r();
+            text-align: left;
+        }
+
+        &--centered {
+            text-align: center;
+        }
+    }
+
+    &__link {
+        color: $primary-color-400;
+
+        cursor: pointer;
+    }
+}
+
+
+
 
 .login-form {
 

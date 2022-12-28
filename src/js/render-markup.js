@@ -5,6 +5,15 @@ import movieDetailsTpl from '/src/templates/movie-details-lightbox.hbs';
 
 const refs = getRefs();
 
+const notifySettings = {
+	width: '380px',
+	distance: '40px',
+	borderRadius: '12px',
+	timeout: 1500,
+	showOnlyTheLastOne: true,
+	fontSize: '18px',
+}
+
 function appendAllMoviesCardsMarkup(movies) {
     refs.allMovieList.insertAdjacentHTML('beforeend', cardsTpl(movies));
 }
@@ -21,4 +30,4 @@ function renderMovieDetails(data) {
     refs.movieContainer.insertAdjacentHTML('afterbegin', movieDetailsTpl(data));
 }
 
-export { appendAllMoviesCardsMarkup, appendUpcomingMoviesCardsMarkup, appendCardsMarkupOnSearch, renderMovieDetails };
+export { appendAllMoviesCardsMarkup, appendUpcomingMoviesCardsMarkup, appendCardsMarkupOnSearch, renderMovieDetails, notifySettings };
