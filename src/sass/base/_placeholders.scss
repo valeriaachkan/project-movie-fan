@@ -17,12 +17,13 @@
     border: 1px solid $primary-color-400;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    @include body-r;
+    @include body-s();
     color: $white-color;
 
     cursor: pointer;
 
-      @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) {
+        @include body-r();
         padding: 16px 32px;
     }
 }
@@ -45,7 +46,4 @@
     @media screen and (min-width: $tablet) {
         padding: 16px 16px 16px 56px;
     }
-    // @media screen and (max-width: 767px) {
-        
-    // }
 }

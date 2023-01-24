@@ -22,25 +22,28 @@
             <nav class="site-nav">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Home</a></li>
-                    <li class="site-nav__item site-nav__item--watchlist visually-hidden"><button
+                    <li class="site-nav__item site-nav__item--watchlist"><button
                             class="site-nav__link site-nav__link--watchlist site-nav__link--btn" type="button">My
-                            Watchlist</button></li>
+                            List</button></li>
                     <li class="site-nav__item site-nav__item--signin"><button
                             class="site-nav__link site-nav__link--signin site-nav__link--btn" type="button">Sign
                             in</button></li>
                     <li class="site-nav__item site-nav__item--logout visually-hidden">
-                        <button class="site-nav__link site-nav__link--logout site-nav__link--btn" type="button">Log
-                            out</button>
+                        <a href="./index.html"><button class="site-nav__link site-nav__link--logout site-nav__link--btn"
+                                type="button">Log
+                                out</button></a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
+    <main class="main">
         <section class="hero">
             <div class="container hero__container">
-                <h1 class="hero__heading">Welcome to MovieFan</h1>
-                <h2 class="hero__subheading">Millions of movies to discover. Explore now.</h2>
+                <div class="heading-thumb">
+                    <h1 class="hero__heading">Welcome to MovieFan</h1>
+                    <h2 class="hero__subheading">Millions of movies to discover. Explore now.</h2>
+                </div>
                 <form class="search-form" id="search-form">
                     <input class="search-form__input" type="text" name="searchQuery" autocomplete="off"
                         placeholder="Search Movies or TV Shows" />
@@ -69,53 +72,39 @@
                 <button type="button" class="load-more visually-hidden">Load more</button>
             </section>
         </div>
+        <section class="section section__container container my-list visually-hidden">
+            <div class="container error-page__container">
+                <img class="error-page__img" src="./images/film-rolls.png" alt="Error page"
+                    srcset="./images/film-rolls.png 1x, ./images/film-rolls-error.png 2x">
+                <h2 class="error-page__heading">Oops, it`s empty!</h2>
+            </div>
+        </section>
         <section class="signin signin__container container visually-hidden">
             <div class="signin-thumb signin-thumb--saly">
                 <img class="signin-thumb__img" src="./images/saly.svg" alt="">
             </div>
-            <!-- <div class="join signin-thumb">
-                <h1 class="signin__heading">Join MovieFan</h1>
-                <ul class="join__list">
-                    <li class="join__item"><button class="join__button" id="joinWithGoogle" type="button">Sign up with
-                            Google</button>
-                        <svg class="join__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 48 48">
-                            <path fill="#fbc02d"
-                                d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
-                            </path>
-                            <path fill="#e53935"
-                                d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
-                            </path>
-                            <path fill="#4caf50"
-                                d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
-                            </path>
-                            <path fill="#1565c0"
-                                d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
-                            </path>
-                        </svg>
-                    </li>
-                    <li class="join__item"><button class="join__button" id="joinWithEmail" type="button">Sign up with
-                            Email</button>
-                        <svg class="join__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
-                                stroke="#C3C8D4" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#C3C8D4"
-                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </li>
-                </ul>
-                <p class="join__text">Already have an account? <span class="join__link">Log in</span></p>
-            </div> -->
             <div class="signup-email">
                 <h1 class="signin__heading">Join MovieFan</h1>
-                <form class="login-form" id="login-form">
+                <form class="login-form" id="signin-form" autocomplete="on">
+                    <label class="login-form__field" for="userName">
+                        <input class="login-form__input" id="userName" name="name" type="text" placeholder="Your Name"
+                            autocomplete="off">
+                        <svg class="login-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.1404 21.62C17.2604 21.88 16.2204 22 15.0004 22H9.00035C7.78035 22 6.74035 21.88 5.86035 21.62C6.08035 19.02 8.75035 16.97 12.0004 16.97C15.2504 16.97 17.9204 19.02 18.1404 21.62Z"
+                                stroke="#475069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M15 2H9C4 2 2 4 2 9V15C2 18.78 3.14 20.85 5.86 21.62C6.08 19.02 8.75 16.97 12 16.97C15.25 16.97 17.92 19.02 18.14 21.62C20.86 20.85 22 18.78 22 15V9C22 4 20 2 15 2ZM12 14.17C10.02 14.17 8.42 12.56 8.42 10.58C8.42 8.60002 10.02 7 12 7C13.98 7 15.58 8.60002 15.58 10.58C15.58 12.56 13.98 14.17 12 14.17Z"
+                                stroke="#475069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M15.5799 10.58C15.5799 12.56 13.9799 14.17 11.9999 14.17C10.0199 14.17 8.41992 12.56 8.41992 10.58C8.41992 8.60002 10.0199 7 11.9999 7C13.9799 7 15.5799 8.60002 15.5799 10.58Z"
+                                stroke="#475069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </label>
                     <label class="login-form__field" for="txtEmail">
                         <input class="login-form__input" id="txtEmail" name="email" type="email" placeholder="Email"
-                            autocomplete="off">
+                            autocomplete="on">
                         <svg class="login-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -130,6 +119,23 @@
                     <label class="login-form__field" for="txtPassword">
                         <input class="login-form__input" id="txtPassword" name="password" type="password"
                             placeholder="Password" autocomplete="off">
+                        <svg class="login-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                                stroke="#475069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M16.2802 13.61C15.1502 14.74 13.5302 15.09 12.1002 14.64L9.5102 17.22C9.3302 17.41 8.9602 17.53 8.6902 17.49L7.4902 17.33C7.0902 17.28 6.7302 16.9 6.6702 16.51L6.5102 15.31C6.4702 15.05 6.6002 14.68 6.7802 14.49L9.3602 11.91C8.9202 10.48 9.2602 8.86001 10.3902 7.73001C12.0102 6.11001 14.6502 6.11001 16.2802 7.73001C17.9002 9.34001 17.9002 11.98 16.2802 13.61Z"
+                                stroke="#475069" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M10.4496 16.28L9.59961 15.42" stroke="#475069" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.3949 10.7H13.4039" stroke="#475069" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </label>
+                    <label class="login-form__field" for="rptPassword">
+                        <input class="login-form__input" id="rptPassword" name="repeatPassword" type="password"
+                            placeholder="Repeat password" autocomplete="off">
                         <svg class="login-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
@@ -184,13 +190,10 @@
                         </svg>
                     </label>
                     <button class="login-form__button" id="btnLogin" type="submit">Log in</button>
-                    <!-- <button class="login-form__button" id="btnSignup" type="submit">Sign up</button> -->
                 </form>
             </div>
         </section>
     </main>
-
-
     <footer class="page-footer">
         <div class="container page-footer__container">
             <a href="./index.html" class="logo">
@@ -202,27 +205,71 @@
                 </svg>
             </a>
             <p class="page-footer__text">A fun and personal project created by <a class="page-footer__link"
-                    href="">Valeria Achkan</a>. Source code available on <a class="page-footer__link"
-                    href="">Github</a>.</p>
+                    href="https://github.com/valeriaachkan">Valeria Achkan</a>. Source code available on <a
+                    class="page-footer__link" href="https://github.com/valeriaachkan/project-movie-fan">Github</a>.</p>
         </div>
     </footer>
     <div class="lightbox lightbox--hidden">
         <div class="lightbox__overlay">
-            <div class="movie-details">
-                <div class="movie__container">
-                </div>
+            <div class="popup visually-hidden">
+                <p class="popup__heading">To add a movie to your list, please, log in.</p>
+                <form class="login-form" id="login-form-popup">
+                    <label class="login-form__field" for="loginEmailPopup">
+                        <input class="login-form__input" id="loginEmailPopup" name="email" type="email"
+                            placeholder="Email" autocomplete="off">
+                        <svg class="login-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                                stroke="#475069" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#475069"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </label>
+                    <label class="login-form__field" for="loginPasswordPopup">
+                        <input class="login-form__input" id="loginPasswordPopup" name="password" type="password"
+                            placeholder="Password" autocomplete="off">
+                        <svg class="login-form__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                                stroke="#475069" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M16.2802 13.61C15.1502 14.74 13.5302 15.09 12.1002 14.64L9.5102 17.22C9.3302 17.41 8.9602 17.53 8.6902 17.49L7.4902 17.33C7.0902 17.28 6.7302 16.9 6.6702 16.51L6.5102 15.31C6.4702 15.05 6.6002 14.68 6.7802 14.49L9.3602 11.91C8.9202 10.48 9.2602 8.86001 10.3902 7.73001C12.0102 6.11001 14.6502 6.11001 16.2802 7.73001C17.9002 9.34001 17.9002 11.98 16.2802 13.61Z"
+                                stroke="#475069" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M10.4496 16.28L9.59961 15.42" stroke="#475069" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.3949 10.7H13.4039" stroke="#475069" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </label>
+                    <button class="login-form__button" id="btnLoginPopup" type="submit">Log in</button>
+                </form>
+                <button type="button" class="lightbox__button" data-action="close-popup">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                            fill="#767E94" />
+                        <path d="M0 0h24v24H0z" fill="none" />
+                    </svg>
+                </button>
+            </div>
 
+            <div class="movie-details">
+                <div class="movie">
+                </div>
                 <button type="button" class="lightbox__button" data-action="close-lightbox">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path
                             d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                            fill="#fff" />
+                            fill="#767E94" />
                         <path d="M0 0h24v24H0z" fill="none" />
                     </svg>
                 </button>
             </div>
         </div>
-    </div>
     </div>
 </body>
 
