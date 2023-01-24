@@ -30,7 +30,6 @@ function showGallerySection() {
 }
 
 function hideGallerySection() {
-	console.log('bye gallery');
 	refs.gallery.classList.add('visually-hidden');
 }
 
