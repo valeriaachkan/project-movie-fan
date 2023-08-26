@@ -1,4 +1,4 @@
-# Project Movie Fan
+# Project Movie Fan 📽️
 
 Movie Listing Web App. A fun and personal project created by me.
 **Live App:** [Project Movie Fan](https://project-movie-fan.herokuapp.com/)
@@ -14,7 +14,7 @@ Users have the capability to log in and create a personalized list of their pref
 - HTML
 - CSS/SCSS
 - Handlebars.js
-- Firebase Database and Firebase Auth
+- Firebase (Cloud Firestore and Authentication)
 
 ## Installation
 
