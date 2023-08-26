@@ -17,6 +17,8 @@ Users have the capability to log in and create a personalized list of their pref
 - Handlebars.js
 - Firebase (Cloud Firestore and Authentication)
 
+This app is based on [The Movie Database API ](https://www.themoviedb.org/)
+
 ## Installation
 
 To run Project Movie Fan locally, follow these steps:
